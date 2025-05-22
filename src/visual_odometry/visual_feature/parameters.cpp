@@ -81,6 +81,8 @@ void readParameters(ros::NodeHandle &n)
         FISHEYE_MASK = pkg_path + mask_name;
     }
 
+    ROS_INFO("FISHEYE %d, FISHEYE_MASK: %s",FISHEYE, FISHEYE_MASK.c_str());
+
     // camera config
     CAM_NAMES.push_back(config_file);
 

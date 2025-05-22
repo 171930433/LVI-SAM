@@ -37,7 +37,9 @@ projection_parameters:
    fx: 607.12255859375
    fy: 606.497924804688
    cx: 322.344360351562
-   cy: 322.34436035
+   cy: 255.49609375
+
+fisheye_mask: "/config/fisheye_mask_720x540.jpg"
 
 #imu parameters       The more accurate parameters you provide, the worse performance
 acc_n: 0.01       # accelerometer measurement noise standard deviation.
@@ -73,7 +75,7 @@ freq: 20                # frequence (Hz) of publish tracking result. At least 10
 F_threshold: 1.0        # ransac threshold (pixel)
 show_track: 1           # publish tracking image as topic
 equalize: 1             # if image is too dark or light, trun on equalize to find enough features
-fisheye: 1              # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
+fisheye: 0             # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
 
 #optimization parameters
 max_solver_time: 0.035   # max solver itration time (ms), to guarantee real time
