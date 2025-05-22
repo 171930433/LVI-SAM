@@ -17,7 +17,7 @@ lvi_sam:
   # Sensor Settings
   N_SCAN: 80                                  # number of lidar channel (i.e., 16, 32, 64, 128)
   Horizon_SCAN: 1800                          # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048)
-  timeField: "time"                           # point timestamp field, Velodyne - "time", Ouster - "t"
+  timeField: "timestamp"                           # point timestamp field, Velodyne - "time", Ouster - "t"
   downsampleRate: 1                           # default: 1. Downsample your data if too many points. i.e., 16 = 64 / 4, 16 = 16 / 1 
 
   # IMU Settings
@@ -25,7 +25,7 @@ lvi_sam:
   imuGyrNoise: 0.003
   imuAccBiasN: 1.5e-4
   imuGyrBiasN: 4.3e-5
-  imuGravity: 9.859781742095947
+  imuGravity: 9.802314
   
   # Extrinsics (lidar -> IMU)
   extrinsicTrans: [0.15, 0.0, 0.53]

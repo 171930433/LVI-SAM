@@ -200,7 +200,8 @@ public:
             pcl::PointCloud<PointXYZIRT>::Ptr cloud_out(new pcl::PointCloud<PointXYZIRT>);
             std::vector<int> indices;
             pcl::removeNaNFromPointCloud(*laserCloudIn, *cloud_out, indices);
-            laserCloudIn->is_dense = true;
+            cloud_out->is_dense = true;
+            cloud_out->header = laserCloudIn->header;  
 
             laserCloudIn = cloud_out;
         }
