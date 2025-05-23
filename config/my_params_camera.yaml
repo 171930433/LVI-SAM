@@ -13,13 +13,13 @@ use_lidar: 1                     # whether use depth info from lidar or not
 lidar_skip: 3                    # skip this amount of scans
 align_camera_lidar_estimation: 1 # align camera and lidar estimation for visualization
 
-#! 看起来没用 lidar to camera extrinsic 
-lidar_to_cam_tx: 0.05
-lidar_to_cam_ty: -0.07
-lidar_to_cam_tz: -0.07
+# 看起来没用 lidar to camera extrinsic 
+lidar_to_cam_tx: 0
+lidar_to_cam_ty: 0
+lidar_to_cam_tz: -0.1
 lidar_to_cam_rx: 0.0
 lidar_to_cam_ry: 0.0
-lidar_to_cam_rz: -0.04
+lidar_to_cam_rz: 0.0
 
 # camera model
 model_type: PINHOLE
@@ -49,7 +49,7 @@ gyr_w: 4.3e-5       # gyroscope bias random work noise standard deviation.
 g_norm: 9.802314     #
 
 # Extrinsic parameter between IMU and Camera.
-estimate_extrinsic: 0   # 0  Have an accurate extrinsic parameters. We will trust the following imu^R_cam, imu^T_cam, don't change it.
+estimate_extrinsic: 1   # 0  Have an accurate extrinsic parameters. We will trust the following imu^R_cam, imu^T_cam, don't change it.
                         # 1  Have an initial guess about extrinsic parameters. We will optimize around your initial guess.
                         # 2  Don't know anything about extrinsic parameters. You don't need to give R,T. We will try to calibrate it. Do some rotation movement at beginning. 
 #Rotation from camera frame to imu frame, imu^R_cam

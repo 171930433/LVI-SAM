@@ -8,7 +8,7 @@ lvi_sam:
   imuTopic: "/imu/data_raw"                         # IMU data
 
   # Heading
-  useImuHeadingInitialization: true          # if using GPS data, set to "true"
+  useImuHeadingInitialization: false          # if using GPS data, set to "true"
   
   # Export settings
   savePCD: false                              # https://github.com/TixiaoShan/LIO-SAM/issues/3
@@ -30,7 +30,7 @@ lvi_sam:
   # Extrinsics (lidar -> IMU)
   extrinsicTrans: [0.15, 0.0, 0.53]
   extrinsicRot: [1, 0, 0, 0, 1, 0, 0, 0, 1]
-  extrinsicRPY: [0, 1, 0, -1, 0, 0, 0, 0, 1]
+  extrinsicRPY: [1, 0, 0, 0, 1, 0, 0, 0, 1]
 
   # LOAM feature threshold
   edgeThreshold: 1.0
