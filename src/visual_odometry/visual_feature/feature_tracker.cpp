@@ -40,7 +40,7 @@ void FeatureTracker::setMask()
     else
         mask = cv::Mat(ROW, COL, CV_8UC1, cv::Scalar(255));
     
-    ROS_WARN("!!!!!!!!!!!!!!!!!!!!!!FISHEYE %d",FISHEYE);
+    // ROS_WARN("!!!!!!!!!!!!!!!!!!!!!!FISHEYE %d",FISHEYE);
 
 
     // prefer to keep features that are tracked for long time
